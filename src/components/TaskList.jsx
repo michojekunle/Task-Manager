@@ -3,13 +3,12 @@ import { TaskListContext } from '../context/TaskListContext';
 import Task from './Task';
 
 const TaskList = () => {
-    const { tasks } = useContext(TaskListContext);
-    alert(tasks);
+    const tasks = useContext(TaskListContext);
   return (
     <ul className='lists'>
         {
             tasks?.map((task)  => {
-                return <Task />
+                return <Task title={task.task} key={task.id}/>
             })
         }
     </ul>
