@@ -8,7 +8,7 @@ const TaskListContextProvider = (props) => {
     
     const localTasks = JSON.parse(localStorage.getItem('tasks'))
     console.log(localTasks);
-    const [tasks, setTasks] = useState(localTasks.length ? localTasks :[]);
+    const [tasks, setTasks] = useState(localTasks || []);
 
     useEffect(() => {
         localStorage.setItem('tasks', JSON.stringify(tasks))
