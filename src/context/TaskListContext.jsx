@@ -32,6 +32,8 @@ const TaskListContextProvider = (props) => {
     const editTask = ( title, id ) => {
         const newTasks = tasks.map(task => task.id === id ? { title, id }: task);
         setTasks(newTasks);
+        setEditItem(null);
+        
     }
 
     return <TaskListContext.Provider value={{tasks, addTask, removeTask, clearList, findItem, editItem, editTask}}>{props.children}</TaskListContext.Provider>

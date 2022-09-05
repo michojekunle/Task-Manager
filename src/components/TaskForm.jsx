@@ -6,8 +6,12 @@ const TaskForm = () => {
     const [title, setTitle] = useState('');
     const handleSubmit = e => {
         e.preventDefault();
-        addTask(title);
-        setTitle('');
+        if (editItem === null) {
+            addTask(title);
+            setTitle('');
+        } else {
+            editTask(title, editItem.id)
+        }
     }
 
     useEffect(() => {
@@ -28,7 +32,7 @@ const TaskForm = () => {
          />
          <div className="buttons">
             <button type="submit" className='btn add-task-btn'>
-                Add Task
+               {editItem === null ? 'Add Task': 'Edit Task'}
             </button>
             <button onClick={() => clearList()} className='btn clear-btn'>
                 Clear
