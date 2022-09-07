@@ -1,6 +1,6 @@
 {
     "theme_color" : "#795",
-    "background_color" : "#000",
+    "background_color" : "#590",
     "display" : "standalone",
     "scope" : "/",
     "start_url" : "/",
@@ -11,7 +11,7 @@
   "icons": [
     {
       "src": "maskable.png",
-      "sizes": "120x120",
+      "sizes": "48x48",
       "type": "image/png",
       "purpose": "any maskable"
     },
